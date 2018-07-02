@@ -23,25 +23,7 @@ RUN mkdir /root/git
 
 WORKDIR /root/git
 
-#RUN subscription-manager repos \
-#    --enable="rhel-7-server-rpms" \
-#    --enable="rhel-7-server-extras-rpms" \
-#    --enable="rhel-7-server-ose-3.6-rpms" \
-#    --enable="rhel-7-fast-datapath-rpms"
 
 RUN yum install git -y
 
-RUN rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 
-
-#RUN yum upgrade -y
-
-#RUN yum install ansible -y
-#RUN wget https://github.com/git/git/archive/v2.9.5.zip -O git.zip
-#RUN unzip git.zip
-#WORKDIR /root/git/git-2.9.5
-
-#RUN make configure
-#RUN ./configure --prefix=/usr
-#RUN make all
-#RUN make install
